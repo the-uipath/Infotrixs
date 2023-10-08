@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+        
+       
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Global styles */
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar-ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar-ul li {
+            font-size: 25px;
+        }
+
+        .navbar-ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        /* Product styles */
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .product-box {
+            flex: 1;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .all-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .small-images img {
+            width: 100px;
+            cursor: pointer;
+        }
+
+        
+        .small-images img:hover {
+            transform: scale(1.2); 
+            transition: transform 0.3s ease;
+        }
+
+        .main-images img {
+            max-width: 100%;
+        }
+
+        .main-images img:hover {
+            transform: scale(1.2); 
+            transition: transform 0.3s ease;
+        }
+
+        .text {
+            flex: 1;
+        }
+
+        .content {
+            padding: 20px;
+        }
+
+        .brand {
+            font-size: 14px;
+            color: #777;
+        }
+
+        h2 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .review {
+            font-size: 18px;
+            color: #fbb03b;
+        }
+
+        .fa-star {
+            color: #fbb03b;
+        }
+
+        .price-box {
+            margin: 10px 0;
+        }
+
+        .price {
+            font-size: 28px;
+            color: #fbb03b;
+        }
+
+        strike {
+            font-size: 20px;
+            color: #777;
+        }
+
+        select {
+            padding: 5px;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .buy {
+            background-color: #28a745;
+        }
+
+        .sale-img img{
+            width: 100%;
+        }
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <ul class="navbar-ul">
+                <li><a href="indexone.html">Home</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="contact-us.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="wrapper">
+            <div class="product-box">
+                <div class="all-images">
+                    <div class="small-images">
+                        <img src="white-iphone.jpg" onclick="clickimg(this)">
+                        <img src="side-view-iphone.jpg" onclick="clickimg(this)">
+                        <img src="black-iphone-screen-view.jpg" onclick="clickimg(this)">
+                        <img src="main-iphone.jpg" onclick="clickimg(this)">
+                    </div>
+                    <div class="main-images">
+                        <img src="main-iphone.jpg" id="imagebox">
+                    </div>
+                </div>
+            </div>
+            <div class="text">
+                <div class="content">
+                    <p class="brand">Brand : Apple</p>
+                    <h2>Apple iPhone 12 Pro (White, 64 GB)</h2>
+                    <div class="review">
+                        <span>(4.6)</span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                    <div class="price-box">
+                        <p class="price">&#8377; 77,900</p>
+                        <strike>&#8377; 89,900</strike>
+                    </div>
+                    <p>Color:
+                        <select name="color">
+                            <option value="select color">Select Color</option>
+                            <option value="black">Black</option>
+                            <option value="green">Green</option>
+                            <option value="purple">Purple</option>
+                            <option value="blue">Blue</option>
+                        </select>
+                    </p>
+                    <p>Quantity: <input type="text" value="1"></p>
+                    <button>
+                        <span class="fa fa-shopping-cart"></span>
+                        Add to Cart
+                    </button>
+                    <button class="buy">
+                        <span class="fa fa-shopping-cart"></span>
+                        Buy Now
+                    </button>
+
+                    <p>
+                        The Apple iPhone 12 Pro is a flagship smartphone that offers a stunning design, powerful performance, and a host of advanced features. With its sleek white finish and 64 GB of storage, it's the perfect choice for those who demand the best.
+                    </p>
+                    <div class="sale-img">
+                        <img src="iphone-sale.jpg">
+                    </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; Nikita Argade 2023</p>
+    </footer>
+
+    <script>
+        function clickimg(smallImg) {
+            var fullimg = document.getElementById("imagebox");
+            fullimg.src = smallImg.src;
+        }
+    </script>
+</body>
+</html>
